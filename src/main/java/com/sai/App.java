@@ -13,6 +13,12 @@ public class App
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
     	Test test = (Test)context.getBean("test");
-    	test.test();
+    	Test test1 = (Test)context.getBean("test");
+
+        CycleTest ctest = (CycleTest)context.getBean("ctest");
+        CycleTest ctest1 = (CycleTest)context.getBean("ctest");
+
+        System.out.println(test == test1);
+        System.out.println(ctest == ctest1);
     }
 }
