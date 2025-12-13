@@ -20,5 +20,9 @@ public class App
 
         System.out.println(test == test1);
         System.out.println(ctest == ctest1);
+
+        System.out.println(test.getMark());
+        System.out.println(ctest.getCmark());
+        System.out.println(ctest.getCmark());
     }
 }
