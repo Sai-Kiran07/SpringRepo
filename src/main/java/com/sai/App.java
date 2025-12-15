@@ -18,11 +18,13 @@ public class App
         CycleTest ctest = (CycleTest)context.getBean("ctest");
         CycleTest ctest1 = (CycleTest)context.getBean("ctest");
 
-        System.out.println(test == test1);
-        System.out.println(ctest == ctest1);
+        System.out.println(test == test1); //singleton beans (true)
+        System.out.println(ctest == ctest1); //prototype beans (false)
 
         System.out.println(test.getMark());
         System.out.println(ctest.getCmark());
         System.out.println(ctest.getCmark());
+        
+        test.display();
     }
 }

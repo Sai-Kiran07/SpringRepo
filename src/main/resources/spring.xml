@@ -1,11 +1,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="test" class="com.sai.Test" scope="singleton">
-        <property name="mark" value="99"></property>
-    </bean>
-    <bean id="ctest" class="com.sai.CycleTest" scope="prototype" >
-        <property name="cmark" value="89"></property>
-    </bean>
+	<bean id="ctest" class="com.sai.CycleTest" scope="prototype">
+		<property name="cmark" value="89"></property>
+	</bean>
+	<bean id="test" class="com.sai.Test" scope="singleton">
+		<property name="mark" value="99"></property>
+		<property name="cycle" ref="ctest"></property>
+	</bean>
 </beans>

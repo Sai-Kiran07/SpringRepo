@@ -8,6 +8,10 @@ public class CycleTest {
     public void setCmark(int cmark) {
         this.cmark = cmark;
     }
+    
+    void distribute() {
+    	System.out.println("Distributing paper....");
+    }
 
     private int cmark;
     CycleTest(){

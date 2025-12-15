@@ -1,8 +1,13 @@
 package com.sai;
 
 public class Test {
+	
+	private CycleTest cycle;
+    public void setCycle(CycleTest cycle) {
+		this.cycle = cycle;
+	}
 
-    public int getMark() {
+	public int getMark() {
         return mark;
     }
 
@@ -16,5 +21,9 @@ public class Test {
     }
 	void test() {
 		System.out.println("Testing..");
+	}
+	
+	void display() {
+		cycle.distribute();
 	}
 }
