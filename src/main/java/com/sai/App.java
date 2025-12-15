@@ -16,7 +16,7 @@ public class App
     	Test test1 = (Test)context.getBean("test");
 
         CycleTest ctest = (CycleTest)context.getBean("ctest");
-        CycleTest ctest1 = (CycleTest)context.getBean("ctest");
+        CycleTest ctest1 = (CycleTest)context.getBean("ctest1");
 
         System.out.println(test == test1); //singleton beans (true)
         System.out.println(ctest == ctest1); //prototype beans (false)
