@@ -5,6 +5,10 @@
 	<bean id="ctest" class="com.sai.CycleTest" scope="prototype">
 		<property name="cmark" value="89"></property>
 	</bean>
+	<bean id="ctest1" class="com.sai.CycleTest" scope="prototype">
+		<constructor-arg name="cmark" value="0" />
+		<property name="cmark" value="99"></property>
+	</bean>
 	<bean id="test" class="com.sai.Test" scope="singleton">
 		<property name="mark" value="99"></property>
 		<property name="cycle" ref="ctest"></property>

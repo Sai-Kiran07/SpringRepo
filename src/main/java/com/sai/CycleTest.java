@@ -1,7 +1,14 @@
 package com.sai;
 
 public class CycleTest {
-    public int getCmark() {
+	
+    public CycleTest(int cmark) {
+		super();
+		this.cmark = cmark;
+		System.out.println(cmark + "Using Const arg");
+	}
+
+	public int getCmark() {
         return cmark;
     }
 
