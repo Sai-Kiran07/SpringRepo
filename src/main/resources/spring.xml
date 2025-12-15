@@ -10,6 +10,8 @@
 		<property name="cmark" value="99"></property>
 	</bean>
 	<bean id="test" class="com.sai.Test" scope="singleton">
+	 	<constructor-arg name="cycle" ref= "ctest"/>
+	 	<constructor-arg name="mark" value= "81"/>
 		<property name="mark" value="99"></property>
 		<property name="cycle" ref="ctest"></property>
 	</bean>

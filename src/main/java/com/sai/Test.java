@@ -1,9 +1,20 @@
 package com.sai;
 
+import java.beans.ConstructorProperties;
+
 public class Test {
 	
 	private CycleTest cycle;
-    public void setCycle(CycleTest cycle) {
+	
+	@ConstructorProperties({"cycle","mark"})
+    public Test(CycleTest cycle, int mark) {
+		super();
+		this.cycle = cycle;
+		this.mark = mark;
+		System.out.println("Inside test's parameterized constructor...");
+	}
+
+	public void setCycle(CycleTest cycle) {
 		this.cycle = cycle;
 	}
 
